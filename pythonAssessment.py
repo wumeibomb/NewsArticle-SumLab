@@ -55,15 +55,18 @@ def calculate_average_word_length(str):
 #calculate_average_word_length("")
 
 def count_paragraphs(str):
-    #if libe break, b? is present, +1?
     separator = r"^\s"
     counter = 0
     okay = re.findall(separator, str, re.MULTILINE)
         #if wordcount is less than certain number, don't include in count???
-    
-    for each in okay:
-        counter += 1
+
+    if str == "":
+        print("1")
+    else:
+        for each in okay:
+            counter += 1
 
     print(counter)
 
-count_paragraphs(text_to_analyze)
+#count_paragraphs(text_to_analyze)
+
