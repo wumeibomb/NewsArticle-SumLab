@@ -11,4 +11,8 @@ This code includes ways to:
 
     Another thing is that the average word length function does not include the underscore character. So if an underscore is present, the length function will include it in the calculation.
   
+<<<<<<< HEAD
   
+=======
+    *The most common word function is not complete
+>>>>>>> 266b2ae (...)
