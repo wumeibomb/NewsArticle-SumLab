@@ -1,7 +1,6 @@
 import re
 
-text_to_analyze = """
-User-Friendly Features
+text_to_analyze = """User-Friendly Features
 
 ACME Inc. has designed the Apple Pie Master with user experience in mind. The machine features a sleek, user-friendly interface with pre-programmed settings for different pie recipes. Users can select options for crust type, spice levels, and even the variety of apples they want to use. “We want to cater to all taste preferences, from the traditional to the adventurous,” said marketing director, Tom Nguyen.
 
@@ -17,10 +16,9 @@ Market Response and Availability
 
 The response to the Apple Pie Master has been overwhelmingly positive. Early adopters and reviewers have praised its ease of use and the quality of the pies it produces. Culinary blogger Mark Spencer commented, “It’s like having a professional baker in your kitchen. The pies are consistently excellent, with perfectly flaky crusts and rich, flavorful fillings.”
 
-ACME Inc. plans to make the Apple Pie Master available online and in select retail stores starting next month. The company has set a competitive price point to make this innovative technology accessible to a broad audience.
-"""
+ACME Inc. plans to make the Apple Pie Master available online and in select retail stores starting next month. The company has set a competitive price point to make this innovative technology accessible to a broad audience."""
 
-#word2 = input("word to count: ")
+word2 = input("word to count: ")
 
 def count_specific_word(text, word2):
     count = 0
@@ -28,10 +26,10 @@ def count_specific_word(text, word2):
     for each in text:
         if each == word2:
             count += 1
-    print(f"{count} matches")
+    print(f"{count} matches for the word '{word2}'")
         #+1 for the counter
 
-#count_specific_word(text_to_analyze, word2)
+count_specific_word(text_to_analyze, word2)
 
 #def identify_most_common_word(text):
 #    find_in = text_to_analyze.split()
@@ -47,26 +45,41 @@ def calculate_average_word_length(str):
         print("None")
     else:
         for eachcharacter in pattern_match:
-         count += 1
+            count += 1
         
         average = count / len(mean)
-        print(average.__round__(2))  
+        print(f"This is the average word count: {average.__round__(2)}")  
 
-#calculate_average_word_length("")
+calculate_average_word_length(text_to_analyze)
 
 def count_paragraphs(str):
     separator = r"^\s"
     counter = 0
-    okay = re.findall(separator, str, re.MULTILINE)
+    checker = re.findall(separator, str, re.MULTILINE)
         #if wordcount is less than certain number, don't include in count???
-
     if str == "":
-        print("1")
+        print("There is 1 paragraph")
     else:
-        for each in okay:
+        for each in checker:
             counter += 1
 
-    print(counter)
+    print(f"There are {counter} paragraphs")
 
-#count_paragraphs(text_to_analyze)
+count_paragraphs(text_to_analyze)
+
+def count_sentences(str):
+    sentences = r"[.?!]"
+    check = re.findall(sentences,str)
+    sentence_count = 0
+
+    if str == "":
+        print("There is 1 sentence")
+
+    else:
+        for each in check:
+            sentence_count += 1
+        print(f"There are {sentence_count} sentences")
+
+
+count_sentences(text_to_analyze)
 
