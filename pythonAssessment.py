@@ -43,12 +43,13 @@ def count_specific_word(text, word2):
         if each == word2:
             count += 1
     print(f"{count} matches for the word '{word2}'")
-        #+1 for the counter
 
 count_specific_word(text_to_analyze, word2)
 
 #def identify_most_common_word(text):
 #    find_in = text_to_analyze.split()
+#       in the text, for each word, count it's frwuency.
+#  if pattern of character == the word - frequency +1, 
 #    if text == "":
 #       print("None")
 #I DON'T KNOW HOW TO FIND THE COMMON WORD...
@@ -78,10 +79,10 @@ def count_paragraphs(str):
     if str == "":
         print("There is 1 paragraph")
     else:
-        for each in checker:
+        for eachparagraph in checker:
             counter += 1
 
-    print(f"There are {counter} paragraphs") #write in readme that paragraph count should have the titles with no space after them and give na example
+    print(f"There are {counter} paragraphs")
 
 count_paragraphs(text_to_analyze)
 
@@ -93,7 +94,7 @@ def count_sentences(str):
         print("There is 1 sentence")
 
     else:
-        for each in check:
+        for eachsentence in check:
             sentence_count += 1
         print(f"There are {sentence_count} sentences") #prints 48 sentences but a character counter online says there are 49?
 
