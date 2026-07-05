@@ -98,7 +98,7 @@ def count_sentences(str):
         for eachsentence in check:
             sentence_count += 1
         print(f"There are {sentence_count} sentences") #prints 48 sentences but a character counter online says there are 49?
-        #tested with other counters and they all give a range of sentences? 
+        #tested with other counters and they all give a range of sentence counts? - seen 41, 44 and grammarly said 57??
 
 
 count_sentences(text_to_analyze)
