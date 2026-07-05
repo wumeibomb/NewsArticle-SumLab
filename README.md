@@ -1,5 +1,5 @@
 # NEWS ARTICLE SUM LAB!!
- To start, this lab, in basic terms is a counter for text strings. 
+To start, this lab, in basic terms is a counter for text strings. 
 This code includes ways to:
 - Count specific words
 - Calculate average word length
@@ -11,4 +11,4 @@ This code includes ways to:
 
     Another thing is that the average word length function does not include the underscore character. So if an underscore is present, the length function will include it in the calculation.
   
-  
+    *The most common word function is not complete
