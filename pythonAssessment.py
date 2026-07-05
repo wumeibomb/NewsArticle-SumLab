@@ -36,6 +36,7 @@ The Apple Pie Master from ACME Inc. represents a significant advancement in the 
 
 word2 = input("word to count: ")
 
+
 def count_specific_word(text, word2):
     count = 0
     text = text_to_analyze.split()
@@ -97,6 +98,7 @@ def count_sentences(str):
         for eachsentence in check:
             sentence_count += 1
         print(f"There are {sentence_count} sentences") #prints 48 sentences but a character counter online says there are 49?
+        #tested with other counters and they all give a range of sentences? 
 
 
 count_sentences(text_to_analyze)
