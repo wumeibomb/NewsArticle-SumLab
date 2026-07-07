@@ -47,12 +47,19 @@ def count_specific_word(text, word2):
 
 count_specific_word(text_to_analyze, word2)
 
-#def identify_most_common_word(text):
-#    find_in = text_to_analyze.split()
+def identify_most_common_word(text):
+    find_in = text_to_analyze.split()
 #       in the text, for each word, count it's frwuency.
-#  if pattern of character == the word - frequency +1, 
-#    if text == "":
-#       print("None")
+    if text == "":
+       print("None")
+    else:
+       counter = {}
+       for eachword in find_in:
+            counter[eachword] =+ 1
+            print(counter)        
+
+identify_most_common_word(text_to_analyze)
+
 #I DON'T KNOW HOW TO FIND THE COMMON WORD...
 
 def calculate_average_word_length(str):
