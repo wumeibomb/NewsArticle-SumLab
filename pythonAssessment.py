@@ -49,15 +49,20 @@ count_specific_word(text_to_analyze, word2)
 
 def identify_most_common_word(text):
     find_in = text_to_analyze.split()
+
 #       in the text, for each word, count it's frwuency.
     if text == "":
        print("None")
     else:
-       counter = {}
+       counter = {} #dictionary 
        for eachword in find_in:
             counter[eachword] =+ 1
-            print(counter)        
-
+            #for x,y in counter.items():
+            #print(x,y)
+            #if x is the same as another x, then add their y's together
+            #whichever y is the highest, print that.
+            #okay I don't know how to total the count and print that..
+            
 identify_most_common_word(text_to_analyze)
 
 #I DON'T KNOW HOW TO FIND THE COMMON WORD...
