@@ -1,6 +1,5 @@
 import re
 
-
 def count_specific_word(text, word2):
     count = 0
     text = text.split()
@@ -10,7 +9,6 @@ def count_specific_word(text, word2):
             count += 1
     print(f"{count}")
 
-count_specific_word("This is as test. Only a test", "test")
 
 def identify_most_common_word(text):
 #       in the text, for each word, count it's frequency.
@@ -42,7 +40,6 @@ def calculate_average_word_length(str):
         average = count / len(mean)
         print(f"{average.__round__(2)}")  
 
-calculate_average_word_length("This is a test")
 
 def count_paragraphs(str):
     separator = r"\s$"
@@ -57,7 +54,6 @@ def count_paragraphs(str):
 
     print(f"{counter}")
 
-count_paragraphs("This is a test. \n\nThis is only a test.")
 
 
 def count_sentences(str):
@@ -73,4 +69,3 @@ def count_sentences(str):
         print(f"{sentence_count}") #prints 48 sentences but a character counter online says there are 49?
         #tested with other counters and they all give a range of sentence counts? - seen 41, 44 and grammarly said 57??
 
-count_sentences("Hello wordl. How are you? I'm fine, thank you.")
