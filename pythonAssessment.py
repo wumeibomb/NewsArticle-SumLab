@@ -1,13 +1,16 @@
 import re
 
-def count_specific_word(text, word2):
+def count_specific_word(text, word):
     count = 0
     text = text.split()
-    print(text)
     for each in text:
-        if each == word2:
+        #if each == word includes the pattern, then count+1 for if each == word
+        if each == word:
             count += 1
+
     print(f"{count}")
+
+count_specific_word("igne gr fwrfvks nfoe vkjsenv ejnvkea fkv we kdjsn we fjksdn we. we fskn we!", "we")
 
 
 def identify_most_common_word(text):
