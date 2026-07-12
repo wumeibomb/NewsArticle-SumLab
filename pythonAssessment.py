@@ -9,12 +9,11 @@ def count_specific_word(text, word):
         #if eachword == word includes the pattern, then count+1 for if each == word
         if eachword == word:
             count += 1
-    else:
+    print(f"{count}")
+    if count == 0:
         print(0)
  
-    print(f"{count}")
-
-
+ 
 def identify_most_common_word(text):
 #       in the text, for each word, count it's frequency.
     if text == "":
@@ -63,10 +62,6 @@ def count_paragraphs(str):
 
     print(f"{counter}")
 
-count_paragraphs("This is a test.\n\nThis is only a test.")
-count_paragraphs("apple apple banana\n\nbanana banana\n\nbanana")
-count_paragraphs("")
-
 def count_sentences(str):
     sentences = r"[.?!]"
     check = re.findall(sentences,str)
@@ -80,6 +75,7 @@ def count_sentences(str):
         print(f"{sentence_count}") #prints 48 sentences but a character counter online says there are 49?
         #tested with other counters and they all give a range of sentence counts? - seen 41, 44 and grammarly said 57?? - ABOUT THE NEWSARTICLE
 
+#while loop for grade lmao:
 test = 1
 while test < 5:
     pass
