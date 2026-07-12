@@ -10,8 +10,6 @@ def count_specific_word(text, word):
 
     print(f"{count}")
 
-count_specific_word("igne gr fwrfvks nfoe vkjsenv ejnvkea fkv we kdjsn we fjksdn we. we fskn we!", "we")
-
 
 def identify_most_common_word(text):
 #       in the text, for each word, count it's frequency.
