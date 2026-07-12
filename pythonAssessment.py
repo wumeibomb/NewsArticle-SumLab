@@ -13,7 +13,7 @@ def count_specific_word(text, word):
     if count == 0:
         print(0)
  
- 
+
 def identify_most_common_word(text):
 #       in the text, for each word, count it's frequency.
     if text == "":
@@ -49,18 +49,22 @@ def calculate_average_word_length(str):
 def count_paragraphs(str):
     separator = r"\n"
     counter = 0
-    bruh = re.split(separator,str)
-    print(bruh)
+    #bruh = re.split(separator,str)
+    #print(bruh)
     checker = re.findall(separator, str, re.MULTILINE)
-    #print(checker)
-    
+    print(checker)
     if str == "":
         print(1)
-    
-    for eachparagraph in checker:
-        counter += 1            
-
+    else:
+        for eachparagraph in checker:
+            counter += 1            
+        if counter == 0:
+            print(1)
     print(f"{counter}")
+
+#count_paragraphs("This is a test.\n\nThis is only a test.")
+#count_paragraphs("apple apple banana\n\nbanana banana banana\n\nbanana")
+#count_paragraphs("")
 
 def count_sentences(str):
     sentences = r"[.?!]"
