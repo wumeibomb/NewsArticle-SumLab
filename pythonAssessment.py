@@ -80,12 +80,12 @@ def count_sentences(str):
         print(f"{sentence_count}") #prints 48 sentences but a character counter online says there are 49?
         #tested with other counters and they all give a range of sentence counts? - seen 41, 44 and grammarly said 57?? - ABOUT THE NEWSARTICLE
 
-#test = 1
-#while test < 5:
-#    print(test)
-#    if test == 4:
-#        print("ok")
-#    test += 1
+test = 1
+while test < 5:
+    pass
+    if test == 4:
+        pass
+    test += 1
     
 
 
