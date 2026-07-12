@@ -2,12 +2,16 @@ import re
 
 def count_specific_word(text, word):
     count = 0
-    text = text.split()
-    for each in text:
-        #if each == word includes the pattern, then count+1 for if each == word
-        if each == word:
+    pattern = r"\W"
+    iterate = re.split(pattern, text)
+    #try re.split()     separator = r"\n|\s" USE \W
+    for eachword in iterate:
+        #if eachword == word includes the pattern, then count+1 for if each == word
+        if eachword == word:
             count += 1
-
+    else:
+        print(0)
+ 
     print(f"{count}")
 
 
@@ -15,6 +19,7 @@ def identify_most_common_word(text):
 #       in the text, for each word, count it's frequency.
     if text == "":
        print("None")
+    #re.split()?
     else:
        counter = {} #dictionary 
        for eachword in text:
@@ -33,7 +38,7 @@ def calculate_average_word_length(str):
     pattern_match = re.findall(pattern, str)
 
     if str == "":
-        print("None")
+        print(0)
     else:
         for eachcharacter in pattern_match:
                 count += 1        
@@ -43,19 +48,24 @@ def calculate_average_word_length(str):
 
 
 def count_paragraphs(str):
-    separator = r"\s$"
+    separator = r"\n"
     counter = 0
+    bruh = re.split(separator,str)
+    print(bruh)
     checker = re.findall(separator, str, re.MULTILINE)
-
+    #print(checker)
+    
     if str == "":
         print(1)
-    else:
-        for eachparagraph in checker:
-            counter += 1
+    
+    for eachparagraph in checker:
+        counter += 1            
 
     print(f"{counter}")
 
-
+count_paragraphs("This is a test.\n\nThis is only a test.")
+count_paragraphs("apple apple banana\n\nbanana banana\n\nbanana")
+count_paragraphs("")
 
 def count_sentences(str):
     sentences = r"[.?!]"
@@ -68,5 +78,14 @@ def count_sentences(str):
         for eachsentence in check:
             sentence_count += 1
         print(f"{sentence_count}") #prints 48 sentences but a character counter online says there are 49?
-        #tested with other counters and they all give a range of sentence counts? - seen 41, 44 and grammarly said 57??
+        #tested with other counters and they all give a range of sentence counts? - seen 41, 44 and grammarly said 57?? - ABOUT THE NEWSARTICLE
+
+#test = 1
+#while test < 5:
+#    print(test)
+#    if test == 4:
+#        print("ok")
+#    test += 1
+    
+
 
